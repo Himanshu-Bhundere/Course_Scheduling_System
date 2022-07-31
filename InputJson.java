@@ -2,22 +2,21 @@ import org.json.simple.*;
 import org.json.simple.parser.*;
 
 import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class InputJson {
-    public static void main(String[] args) {
+    public Map<String, String> room_no;
+    public JSONArray course, times;
+    public void getJsonData() {
         JSONParser parser = new JSONParser();
+        room_no = new HashMap<String, String>();
         try {
-            Object obj = parser.parse(new FileReader("/Users/himan/OneDrive/Desktop/SE/Exercise_1/Course_Scheduling_System/course.json"));
+            Object obj = parser.parse(new FileReader("course.json"));
             JSONObject jsonObject = (JSONObject) obj;
-            String name = (String) jsonObject.get("Name");
-            String course = (String) jsonObject.get("Course");
-            JSONArray subjects = (JSONArray) jsonObject.get("Subjects");
-            System.out.println("Name: " + name);
-            System.out.println("Course: " + course);
-            System.out.println("Subjects:");
-            for (Object subject : subjects) {
-                System.out.println(subject);
-            }
+            room_no = (HashMap<String, String>) jsonObject.get("rooms");
+            course = (JSONArray) jsonObject.get("courses");
+            times = (JSONArray) jsonObject.get("times");
         } catch (Exception e) {
             e.printStackTrace();
         }

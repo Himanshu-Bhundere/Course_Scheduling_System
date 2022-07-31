@@ -3,17 +3,18 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class InputCsv {
-    public static void main(String[] args) {
-        String[][] course1 = new String[10][10];  // PG having preference
-        String[][] course2 = new String[10][10];  // UG with preference
-        String[][] course3 = new String[10][10];  // PG without preference
-        String[][] course4 = new String[10][10];  // UG without preference
+
+    public String[][] course1 = new String[10][3];  // PG having preference
+    public String[][] course2 = new String[10][3];  // UG with preference
+    public String[][] course3 = new String[10][3];  // PG without preference
+    public String[][] course4 = new String[10][3];  // UG without preference
+    public void getCsvData() {
 
         String splitBy = ",", line; // use comma as separator
         int row_course1 = 0, row_course2 = 0, row_course3 = 0, row_course4 = 0;   // counter for course
         try {
             //parsing a CSV file into BufferedReader class constructor
-            BufferedReader br = new BufferedReader(new FileReader("/Users/himan/OneDrive/Desktop/SE/Exercise_1/Course_Scheduling_System/course.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("course.csv"));
             while ((line = br.readLine()) != null)   //returns a Boolean value
             {
                 int num_pref = 0;
@@ -43,29 +44,29 @@ public class InputCsv {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < row_course1; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(course1[i][j]);
-            }
-            System.out.println();
-        }
-        for (int i = 0; i < row_course3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(course3[i][j]);
-            }
-            System.out.println();
-        }
-        for (int i = 0; i < row_course2; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(course2[i][j]);
-            }
-            System.out.println();
-        }
-        for (int i = 0; i < row_course4; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(course4[i][j]);
-            }
-            System.out.println();
-        }
+//        for (int i = 0; i < row_course1; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(course1[i][j]);
+//            }
+//            System.out.println();
+//        }
+//        for (int i = 0; i < row_course3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(course3[i][j]);
+//            }
+//            System.out.println();
+//        }
+//        for (int i = 0; i < row_course2; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(course2[i][j]);
+//            }
+//            System.out.println();
+//        }
+//        for (int i = 0; i < row_course4; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(course4[i][j]);
+//            }
+//            System.out.println();
+//        }
     }
 }
