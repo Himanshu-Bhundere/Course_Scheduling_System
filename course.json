@@ -1,0 +1,9 @@
+{
+  "Course": "MCA",
+  "Name": "Raja",
+  "Subjects": [
+    "subject1: MIS",
+    "subject2: DBMS",
+    "subject3: UML"
+  ]
+}
