@@ -3,7 +3,7 @@ import org.json.simple.parser.*;
 
 import java.io.FileReader;
 
-public class inputJson {
+public class InputJson {
     public static void main(String[] args) {
         JSONParser parser = new JSONParser();
         try {
