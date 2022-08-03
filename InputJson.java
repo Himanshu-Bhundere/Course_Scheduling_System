@@ -6,11 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class InputJson {
-    public Map<String, String> room_no;
+    public Map<String, String> room_no, timeslot;
     public JSONArray course, times;
     public void getJsonData() {
         JSONParser parser = new JSONParser();
-        room_no = new HashMap<String, String>();
+        room_no = new HashMap<>();
+        timeslot = new HashMap<>();
         try {
             Object obj = parser.parse(new FileReader("course.json"));
             JSONObject jsonObject = (JSONObject) obj;
@@ -19,6 +20,9 @@ public class InputJson {
             times = (JSONArray) jsonObject.get("times");
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        for(int i=0; i< times.size(); i++){
+            timeslot.put((String) times.get(i), null);
         }
     }
 }
