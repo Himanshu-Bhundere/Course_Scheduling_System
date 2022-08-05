@@ -4,10 +4,10 @@ import java.io.IOException;
 
 public class InputCsv {
 
-    public String[][] course1 = new String[10][3];  // PG having preference
-    public String[][] course2 = new String[10][3];  // UG with preference
-    public String[][] course3 = new String[10][3];  // PG without preference
-    public String[][] course4 = new String[10][3];  // UG without preference
+    public String[][] course1 = new String[30][3];  // PG having preference
+    public String[][] course2 = new String[30][3];  // UG with preference
+    public String[][] course3 = new String[30][3];  // PG without preference
+    public String[][] course4 = new String[30][3];  // UG without preference
     public void getCsvData() {
 
         String splitBy = ",", line; // use comma as separator

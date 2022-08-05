@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -32,8 +31,6 @@ public class Room_Allotment {
             rooms.remove(alloted_rooms.get(i).get(1));
             i++;
         }
-        System.out.println(alloted_rooms);
-        System.out.println();
     }
 }
 
