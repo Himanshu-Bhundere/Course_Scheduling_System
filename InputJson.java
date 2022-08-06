@@ -22,7 +22,7 @@ public class InputJson {
             e.printStackTrace();
         }
         for(int i=0; i< times.size(); i++){
-            timeslot.put((String) times.get(i), null);
+            timeslot.put((String)times.get(i), null);
         }
     }
 }
