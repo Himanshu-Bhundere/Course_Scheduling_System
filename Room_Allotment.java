@@ -27,10 +27,9 @@ public class Room_Allotment {
                     }
                 }
             }
-
-            rooms.remove(alloted_rooms.get(i).get(1));
             i++;
         }
+        System.out.println(alloted_rooms);
     }
 }
 
