@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public class Main {
 
         String[][] timeTable= new String[inputJson.room_no.size()+1][inputJson.timeslot.size()+1];//5+1 8+1
 
-        System.out.println("\n\t\t\t\t\t\t\tTimeTable\n");
+        System.out.println("\n\t\t\t\t\t\t\tOutput File Generated......");
 
         //initializing timetable
         int i=1;
@@ -72,27 +71,26 @@ public class Main {
                 }
             }
         }
-
+        FileGenerator.outputFile(inputJson.room_no, inputJson.timeslot, timeTable);
         //printing timetable
-        for (int j=0;j<inputJson.room_no.size()+1;j++)
-        {
-            for(int k=0;k<inputJson.timeslot.size()+1;k++)
-            {
-                if(j==0) {
-                    if (k == 0)
-                        System.out.print("  " + timeTable[j][k] + "  ");
-                    else
-                        System.out.print(timeTable[j][k] + "    ");
-                }
-                else {
-                    if(k>=inputJson.timeslot.size()-2)
-                        System.out.print(timeTable[j][k] + "     ");
-                    else
-                        System.out.print(timeTable[j][k] + "   ");
-                }
-            }
-            System.out.println();
-        }
-
+//        for (int j=0;j<inputJson.room_no.size()+1;j++)
+//        {
+//            for(int k=0;k<inputJson.timeslot.size()+1;k++)
+//            {
+//                if(j==0) {
+//                    if (k == 0)
+//                        System.out.print("  " + timeTable[j][k] + "  ");
+//                    else
+//                        System.out.print(timeTable[j][k] + "    ");
+//                }
+//                else {
+//                    if(k>=inputJson.timeslot.size()-2)
+//                        System.out.print(timeTable[j][k] + "     ");
+//                    else
+//                        System.out.print(timeTable[j][k] + "   ");
+//                }
+//            }
+//            System.out.println();
+//        }
     }
 }

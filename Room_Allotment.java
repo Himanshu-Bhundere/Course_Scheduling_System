@@ -29,7 +29,6 @@ public class Room_Allotment {
             }
             i++;
         }
-        System.out.println(alloted_rooms);
     }
 }
 
