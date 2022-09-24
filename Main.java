@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         InputCsv inputCsv = new InputCsv();
         InputJson inputJson = new InputJson();
@@ -73,7 +74,8 @@ public class Main {
                 }
             }
         }
-        FileGenerator.slotExists("2", "MWF2");
+
+        FileGenerator.dayTime(inputJson.room_no, inputJson.timeslot);
         FileGenerator.outputFile(inputJson.room_no, inputJson.timeslot, timeTable);
         //printing timetable
 //        for (int j=0;j<inputJson.room_no.size()+1;j++)
