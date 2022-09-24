@@ -48,6 +48,8 @@ public class Main {
         }
         // initializing over
 
+        System.out.println(Room_Allotment.alloted_rooms);
+        System.out.println(inputJson.timeslot);
         // filling timetable
         int a=1;//a rows
         boolean flag=false;
@@ -71,6 +73,7 @@ public class Main {
                 }
             }
         }
+        FileGenerator.slotExists("2", "MWF2");
         FileGenerator.outputFile(inputJson.room_no, inputJson.timeslot, timeTable);
         //printing timetable
 //        for (int j=0;j<inputJson.room_no.size()+1;j++)
