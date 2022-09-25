@@ -75,27 +75,27 @@ public class Main {
             }
         }
 
-        FileGenerator.dayTime(inputJson.room_no, inputJson.timeslot);
+        FileGenerator.dayTime(Room_Allotment.alloted_rooms, inputJson.timeslot);
         FileGenerator.outputFile(inputJson.room_no, inputJson.timeslot, timeTable);
         //printing timetable
-//        for (int j=0;j<inputJson.room_no.size()+1;j++)
-//        {
-//            for(int k=0;k<inputJson.timeslot.size()+1;k++)
-//            {
-//                if(j==0) {
-//                    if (k == 0)
-//                        System.out.print("  " + timeTable[j][k] + "  ");
-//                    else
-//                        System.out.print(timeTable[j][k] + "    ");
-//                }
-//                else {
-//                    if(k>=inputJson.timeslot.size()-2)
-//                        System.out.print(timeTable[j][k] + "     ");
-//                    else
-//                        System.out.print(timeTable[j][k] + "   ");
-//                }
-//            }
-//            System.out.println();
-//        }
+        for (int j=0;j<inputJson.room_no.size()+1;j++)
+        {
+            for(int k=0;k<inputJson.timeslot.size()+1;k++)
+            {
+                if(j==0) {
+                    if (k == 0)
+                        System.out.print("  " + timeTable[j][k] + "  ");
+                    else
+                        System.out.print(timeTable[j][k] + "    ");
+                }
+                else {
+                    if(k>=inputJson.timeslot.size()-2)
+                        System.out.print(timeTable[j][k] + "     ");
+                    else
+                        System.out.print(timeTable[j][k] + "   ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
