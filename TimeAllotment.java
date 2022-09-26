@@ -41,5 +41,6 @@ public class TimeAllotment {
                 }
             }
         }
+        System.out.println(timeslot);
     }
 }

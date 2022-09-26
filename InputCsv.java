@@ -14,7 +14,7 @@ public class InputCsv {
         int row_course1 = 0, row_course2 = 0, row_course3 = 0, row_course4 = 0;   // counter for course
         try {
             //parsing a CSV file into BufferedReader class constructor
-            BufferedReader br = new BufferedReader(new FileReader("course.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("course2.csv"));
             while ((line = br.readLine()) != null)   //returns a Boolean value
             {
                 int num_pref = 0;

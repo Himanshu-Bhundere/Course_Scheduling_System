@@ -13,7 +13,7 @@ public class InputJson {
         room_no = new HashMap<>();
         timeslot = new HashMap<>();
         try {
-            Object obj = parser.parse(new FileReader("course.json"));
+            Object obj = parser.parse(new FileReader("course2.json"));
             JSONObject jsonObject = (JSONObject) obj;
             room_no = (HashMap<String, String>) jsonObject.get("rooms");
             course = (JSONArray) jsonObject.get("courses");
