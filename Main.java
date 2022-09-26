@@ -3,10 +3,10 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Main {
+    public static InputCsv inputCsv = new InputCsv();
+    public static InputJson inputJson = new InputJson();
     public static void main(String[] args) {
 
-        InputCsv inputCsv = new InputCsv();
-        InputJson inputJson = new InputJson();
 
         inputCsv.getCsvData();
         inputJson.getJsonData();
