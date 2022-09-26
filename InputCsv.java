@@ -19,7 +19,7 @@ public class InputCsv {
         int row_course1 = 0, row_course2 = 0, row_course3 = 0, row_course4 = 0;   // counter for course
         try {
             //parsing a CSV file into BufferedReader class constructor
-            BufferedReader br = new BufferedReader(new FileReader("course.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("course1.csv"));
             while ((line = br.readLine()) != null)   //returns a Boolean value
             {
                 int num_pref = 0;
@@ -99,29 +99,29 @@ public class InputCsv {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        for (int i = 0; i < row_course1; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                System.out.print(course1[i][j]);
-//            }
-//            System.out.println();
-//        }
-//        for (int i = 0; i < row_course3; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                System.out.print(course3[i][j]);
-//            }
-//            System.out.println();
-//        }
-//        for (int i = 0; i < row_course2; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                System.out.print(course2[i][j]);
-//            }
-//            System.out.println();
-//        }
-//        for (int i = 0; i < row_course4; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                System.out.print(course4[i][j]);
-//            }
-//            System.out.println();
-//        }
+        for (int i = 0; i < row_course1; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(course1[i][j]);
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < row_course3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(course3[i][j]);
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < row_course2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(course2[i][j]);
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < row_course4; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(course4[i][j]);
+            }
+            System.out.println();
+        }
     }
 }

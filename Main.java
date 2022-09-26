@@ -7,9 +7,9 @@ public class Main {
     public static InputJson inputJson = new InputJson();
     public static void main(String[] args) {
 
-
-        inputCsv.getCsvData();
         inputJson.getJsonData();
+        inputCsv.getCsvData();
+
 
         Room_Allotment.bestFit(inputJson.room_no, inputCsv.course1);
         Room_Allotment.bestFit(inputJson.room_no, inputCsv.course2);
